@@ -1,11 +1,11 @@
 ﻿# HTML Files for Workshop
-[Hands-on lab step-by step - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Hands-on%20lab%20step-by%20step%20-%20Securing%20PaaS.html)
+[WDS student guide - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Whiteboard%20design%20session/WDS%20student%20guide%20-%20Securing%20PaaS.html)
 
-[Hands-on lab unguided - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Hands-on%20lab%20unguided%20-%20Securing%20PaaS.html)
+[WDS trainer guide - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Securing%20PaaS.html)
 
-[Setup.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Setup.html)
+[Before the lab.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Hands-on%20lab/Before%20the%20lab.html)
 
-[Whiteboard design session student guide - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Whiteboard%20design%20session%20student%20guide%20-%20Securing%20PaaS.html)
+[HOL step-by step - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Hands-on%20lab/HOL%20step-by%20step%20-%20Securing%20PaaS.html)
 
-[Whiteboard design session trainer guide - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Whiteboard%20design%20session%20trainer%20guide%20-%20Securing%20PaaS.html)
+[HOL unguided - Securing PaaS.html](https://cloudworkshop.blob.core.windows.net/securing-paas/Hands-on%20lab/HOL%20unguided%20-%20Securing%20PaaS.html)
 
