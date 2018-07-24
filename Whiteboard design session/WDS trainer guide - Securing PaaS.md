@@ -324,13 +324,13 @@ Directions: With all participants at your table, respond to the following questi
 
 *Securing the core website components*
 
-4.  The Fourth Coffee website should be publicly accessible, but the gift card API should not be accessible from the Internet. Additionally, all traffic flowing through to the website should pass through some kind of firewall to guard against malicious requests like cross-site scripting and SQL injection, and the website itself should never be directly accessible in any other way. How would you accomplish this?
+1.  The Fourth Coffee website should be publicly accessible, but the gift card API should not be accessible from the Internet. Additionally, all traffic flowing through to the website should pass through some kind of firewall to guard against malicious requests like cross-site scripting and SQL injection, and the website itself should never be directly accessible in any other way. How would you accomplish this?
 
-5.  Fourth Coffee does not like the fact that their existing SQL Database deployment, which contains sensitive customer personally identifiable data (PII), has an endpoint that is accessible on the Internet. They have the firewall rules configured on the SQL Database Server to restrict access, but they would prefer a solution that does not have such a publicly exposed endpoint. What would you suggest and how would they accomplish this?
+2.  Fourth Coffee does not like the fact that their existing SQL Database deployment, which contains sensitive customer personally identifiable data (PII), has an endpoint that is accessible on the Internet. They have the firewall rules configured on the SQL Database Server to restrict access, but they would prefer a solution that does not have such a publicly exposed endpoint. What would you suggest and how would they accomplish this?
 
-6.  Fourth Coffee is storing customer purchase history for the long term in Azure Storage blobs. Like their previous concern, they would like to know if they could remove the public endpoint access from Azure Storage, since the transaction data reflects sensitive financial transaction information.
+3.  Fourth Coffee is storing customer purchase history for the long term in Azure Storage blobs. Like their previous concern, they would like to know if they could remove the public endpoint access from Azure Storage, since the transaction data reflects sensitive financial transaction information.
 
-7.  The existing API App is deployed with the connection string information to the SQL Database saved in the web.config. Fourth Coffee would like to improve the handling of sensitive configuration. What would you recommend they do and how would they need to change their app to support your recommendation?
+4.  The existing API App is deployed with the connection string information to the SQL Database saved in the web.config. Fourth Coffee would like to improve the handling of sensitive configuration. What would you recommend they do and how would they need to change their app to support your recommendation?
 
 *Enabling reviews*
 
