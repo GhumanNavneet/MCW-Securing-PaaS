@@ -1,12 +1,10 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
-
 <div class="MCWHeader1">
 Securing PaaS
 </div>
 
 <div class="MCWHeader2">
-
 Whiteboard design session student guide
 </div>
 
@@ -93,15 +91,19 @@ This workshop is designed to provide exposure to many of Microsoft Azure's PaaS 
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
-Time frame: 15 minutes 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
+Analyze your customer's needs.
+
+Timeframe: 15 minutes
+
+Directions:  With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
+
+1.  Meet your table participants and trainer
+
+2.  Read all of the directions for steps 1-3 in the student guide
+
 3.  As a table team, review the following customer case study
-
 
 ### Customer situation
 
@@ -121,8 +123,6 @@ In addition to securing access to sensitive data, they would like to gain visibi
 
 They would like to start designing a pilot solution for one region, that if successful, they could deploy globally down the road.
 
- 
-
 ### Customer needs 
 
 1.  Safeguard and manage identity of users and services
@@ -137,13 +137,11 @@ They would like to start designing a pilot solution for one region, that if succ
 
 6.  They want to achieve the right balance of security versus complexity
 
-7.  Security centered around PaaS services
+7.  Security centered around PaaS services 
 
- 
+ ### Customer objections 
 
-### Customer objections 
-
-1.  Can we really set it up so our developers' applications have access to the connection strings, keys and other secrets at run time, without enabling the developers themselves to access this sensitive data?
+1.  Can we really set it up, so our developers' applications have access to the connection strings, keys and other secrets at run time, without enabling the developers themselves to access this sensitive data?
 
 2.  We've been told over and over again that Azure's services, like Azure SQL Database and Azure Storage, must always have a public endpoint. Is that really true?
 
@@ -151,27 +149,29 @@ They would like to start designing a pilot solution for one region, that if succ
 
 4.  We need to be certain that all of our data is encrypted when it is stored on disk, is that possible with the PaaS services you are recommending?
 
-
 ### Infographic for common scenarios
 
 ![The infographic for common scenarios diagram is of a layered approach to security with a solution that uses Azure PaaS services. ](images/Whiteboarddesignsessionstudentguide-SecuringPaaSimages/media/image2.png "Infographic for common scenarios")
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
+**Outcome**
 
-Time frame: 60 minutes
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+
+Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+Directions: With all participants at your table, answer the following questions and list the answers on a flip chart:
+
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
-**Design** 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+**Design**
 
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 *High-level architecture*
 
@@ -179,9 +179,7 @@ Directions: With all participants at your table, respond to the following questi
 
 2.  What data would you consider sensitive in this scenario? Is there a compliance standard that you would recommend Fourth Coffee consider building their solution against?
 
-*Securing Customer Identity *
-
-
+*Securing Customer Identity*
 
 1.  Fourth Coffee mentioned a desire to improve how they manage and store the identities of their customers, for use when granting them access to their online profiles. What approach would recommend they take to modernize their identity management?
 
@@ -200,8 +198,6 @@ Directions: With all participants at your table, respond to the following questi
 4.  The existing API App is deployed with the connection string information to the SQL Database saved in the web.config. Fourth Coffee would like to improve the handling of sensitive configuration. What would you recommend they do and how would they need to change their app to support your recommendation?
 
 *Enabling reviews*
-
-
 
 1.  Fourth Coffee wants to be certain that their mini-platform for reviews can scale and are less concerned about securing the data (other than securing access to edit the reviews appropriately). How would you suggest Fourth Coffee deploy the logic for managing and navigating reviews, how would reviews (which could grow to become very large data sets) be stored?
 
@@ -222,42 +218,49 @@ Directions: With all participants at your table, respond to the following questi
 1.  What services would you suggest Fourth Coffee utilize in order to monitor the general health of the solution?
 
 2.  What service would you suggest Fourth Coffee utilize to monitor the security health of the solution? What it would it provide for their solution?
-
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
+1.  Identify any customer needs that are not addressed with the proposed solution
 
-Prepare a 15-minute chalk-talk style presentation to the customer. 
+2.  Identify the benefits of your solution
+
+3.  Determine how you will respond to the customer's objections
+
+Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
 
+1.  Pair with another table
+
+2.  One table is the Microsoft team and the other table is the customer
+
+3.  The Microsoft team presents their proposed solution to the customer
+
+4.  The customer makes one of the objections from the list of objections
+
+5.  The Microsoft team responds to the objection
+
+6.  The customer team gives feedback to the Microsoft team
+
+7.  Tables switch roles and repeat Steps 2-6
 
 ##  Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
--   Tables reconvene with the larger group to hear a SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Additional references
 
