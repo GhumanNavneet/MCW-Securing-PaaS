@@ -43,8 +43,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 3.  **To ensure you can begin the course delivery on-time, you must take the following step at least 5-hours prior to the course start time:**
 
-    -   **Run the Azure resource template -- The Application Service Environment can take more than 90-minutes to create.**
-
+    -   **Run the Azure resource template -- The Application Service Environment can take more than 90-minutes to create**
 
 ## Before the hands-on lab
 
@@ -166,11 +165,11 @@ In this task, you will log into the lab VM that was created by the ARM template 
 
 2.  Once logged in, launch the Server Manager. This should start automatically, but you can access it via the Start menu if it does not start.
 
-3.  Select Local Server, the select On next to IE Enhanced Security Configuration. 
+3.  Select Local Server, the select On next to IE Enhanced Security Configuration.
 
     ![Local Server is selected and highlighted on the left side of Server Manager, and at right, IE Enhanced Security Configuration On is highlighted under Properties For LabVM.](images/Setup/image14.png "Select IE Enhanced Security Configuration")
 
-1.  In the Internet Explorer Enhanced Security Configuration dialog, select Off under Administrators, then select OK.
+1.  In the Internet Explorer Enhanced Security Configuration dialog, select Off under Administrators, then select OK
 
     ![Off is selected under Administrators in the Internet Explorer Enhanced Security Configuration dialog box.](images/Setup/image15.png "Disable Administrators")
 
@@ -216,7 +215,7 @@ Below, you will install Power BI on the jump VM, which will be used in Exercise 
 
 1.  In a web browser on you jump VM navigate to the Power BI Desktop download page (<https://powerbi.microsoft.com/en-us/desktop/>)
 
-2.  Select the Download Free link in the middle of the page.
+2.  Select the Download Free link in the middle of the page
 
   ![The Power BI Desktop download screen is displayed, and Download Free is selected.](images/Setup/image19.png "Power BI Desktop download screen")
 
