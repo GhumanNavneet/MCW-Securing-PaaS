@@ -6,7 +6,6 @@ Securing PaaS
 </div>
 
 <div class="MCWHeader2">
-
 Hands-on lab step-by-step
 </div>
 
@@ -79,7 +78,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 3: Delete lab environment (optional)](#task-3-delete-lab-environment-optional)
 
 <!-- /TOC -->
-
 
 # Securing PaaS hands-on lab step-by-step 
 
@@ -172,22 +170,23 @@ Duration: 45 minutes
 
 Synopsis: In this exercise, attendees will learn how to create Azure Active Directory (Azure AD) groups and users and then securing them using multi-factor authentication.
 
-> NOTE: If you are using a corporate Azure instance and do not have access to Active Directory, you will not be able to complete this exercise, and should skip to [Exercise 3](#exercise-3-azure-deployments-using-azure-key-vault).**
+> NOTE: If you are using a corporate Azure instance and do not have access to Active Directory, you will not be able to complete this exercise, and should skip to [Exercise 3](#exercise-3-azure-deployments-using-azure-key-vault).
 
 ### Task 1: Create Azure Active Directory groups
 
 In this task, you will create security groups in Azure AD to be used in exercises later in this hands-on lab.
 
-1.  Open your Azure Portal (<https://portal.azure.com>).
+1.  Open your Azure Portal (<https://portal.azure.com>)
 
-2.  Select **Azure Active Directory**.
+2.  Select **Azure Active Directory**
 
     ![The Azure Active Directory option displays in the Azure Portal.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image25.png "Azure Portal")
 
-3.  Select **Groups,** then select **All groups**.\
+3.  Select **Groups,** then select **All groups**
+
    ![In the Azure Active Dirctory blade, under MANAGE, Groups is selected, and All groups is selected on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image26.png "Groups menu")
 
-4.  Select **+New group**.
+4.  Select **+New group**
 
     ![On the All groups blade top menu, New group is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image27.png "All groups blade")
 
@@ -199,42 +198,45 @@ In this task, you will create security groups in Azure AD to be used in exercise
 
     c.  **Group description**: Enter **Key Vault Mgmt Admins**
 
-    d.  **Membership type**: select **Assigned** \
+    d.  **Membership type**: select **Assigned**
+    
     ![The Group blade displays with the previously defined settings entered into the appropriate fields.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image28.png "Create Group blade")
 
-6.  Select **Create** and close the dialog window if it does not close.
+6.  Select **Create** and close the dialog window if it does not close
 
-7.  Select **+New group** again.
+7.  Select **+New group** again
 
 8.  On the Group blade, enter the following:
 
-    e.  **Group type**: Select **Security**
+    a.  **Group type**: Select **Security**
 
-    f.  **Group name**: Enter **Key Vault Key Admins**
+    b.  **Group name**: Enter **Key Vault Key Admins**
 
-    g.  **Group description**: Enter **Key Vault Key Admins**
+    c.  **Group description**: Enter **Key Vault Key Admins**
 
-    h.  **Membership type**: select **Assigned** \
+    d.  **Membership type**: select **Assigned** 
+    
     ![The Group blade displays with the previously defined settings entered into the appropriate fields.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image29.png "Create Group blade")
 
-9.  Select **Create** and close the dialog window if it does not close.
+9.  Select **Create** and close the dialog window if it does not close
 
 ### Task 2: Create Azure Active Directory accounts
 
 In this task, you will create multiple Azure AD user accounts that will be used within the exercises in this hands-on lab to demonstrate the various levels of permissions and access control with Azure resources.
 
-1.  Determine your Active Directory domain name.
+1.  Determine your Active Directory domain name
 
-    a.  Select **Azure Active Directory**.
+    a.  Select **Azure Active Directory**
 
-    b.  Select **Custom domain names**.
+    b.  Select **Custom domain names**
 
-    c.  Record the **\*.microsoftonline.com** domain name, you will use this later.
+    c.  Record the **\*.microsoftonline.com** domain name, you will use this later
 
-2.  Select **Users**, then select **All users**.\
+2.  Select **Users**, then select **All users**
+
    ![In the Azure Active Dirctory blade, under MANAGE, Users is selected, and All users is selected on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image30.png "Users menu")
 
-3.  Select **+New user**.
+3.  Select **+New user**
 
 4.  On the User blade, enter the following:
 
@@ -242,33 +244,33 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     b.  **User name**, enter [KeyVaultAdmin@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAdmin@%3cyourdomain%3e.microsoftonline.com)
 
-    -   NOTE: Use the domain you recorded earlier.
+    -   NOTE: Use the domain you recorded earlier
 
-    c.  Select **Groups**.
+    c.  Select **Groups**
 
-    d. Select **Key Vault Mgmt Admins**, select.
+    d. Select **Key Vault Mgmt Admins**, select
 
-    e.  Select **Create**.
+    e.  Select **Create**
 
-5.  Select **+New user** again.
+5.  Select **+New user** again
 
 6.  On the User blade, enter the following:
 
-    a.  **Name**: Enter **Key Vault Auditor**.
+    a.  **Name**: Enter **Key Vault Auditor**
 
     b.  **User name**, enter [KeyVaultAuditor@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAuditor@%3cyourdomain%3e.microsoftonline.com)
 
-    -   NOTE: Use the domain you recorded earlier.
+    -   NOTE: Use the domain you recorded earlier
 
-    c.  Select **Groups**.
+    c.  Select **Groups**
 
         ii. Select **Key Vault Mgmt Admins**, select.
 
-    d.  Select **Create**.
+    d.  Select **Create**
 
-7.  Select **+New user** again.
+7.  Select **+New user** again
 
-    a.  **Name**, enter **Key Vault Developer**.
+    a.  **Name**, enter **Key Vault Developer**
 
     b.  **User name**, enter [KeyVaultDeveloper@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultDeveloper@%3cyourdomain%3e.microsoftonline.com)
 
@@ -276,29 +278,31 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     c.  NOTE: No groups will be assigned to this user.
 
-    d.  Select **Create**.
+    d.  Select **Create**
 
 ### Task 3: Enable Azure Identity Protection features 
 
 In this task, you will enable multi-factor authentication on the Key Vault Admin account you created in the previous task to demonstrate the Identity Protection features of Azure.
 
-1.  Select your Active Directory.
+1.  Select your Active Directory
 
-2.  Select **MFA Server**.
+2.  Select **MFA Server**
 
     ![Under Security, MFA Server is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image31.png "MFA Server")
 
-3.  Select **Get Free Premium Trial**.
+3.  Select **Get Free Premium Trial**
 
-4.  Select the **AZURE AD PREMIUM P2** option, select **Free trial**. \
+4.  Select the **AZURE AD PREMIUM P2** option, select **Free trial**
+
   ![The Azure AD Premium P2 tile is selected, and Free trial is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image32.png "Azure AD Premium P2 trial")
 
-5.  Select **Activate**.
+5.  Select **Activate**
 
-6.  Select **Users**, the select **All users**. \
+6.  Select **Users**, the select **All users**
+
   ![In the Azure Active Dirctory blade, under MANAGE, Users is selected, and All users is selected on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image30.png "Users menu")
 
-7.  Select **Multi-Factor Authentication**.
+7.  Select **Multi-Factor Authentication**
 
     ![The Multi-Factor Authentication option is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image33.png "Multi-Factor Authentication option")
 
@@ -306,79 +310,85 @@ In this task, you will enable multi-factor authentication on the Key Vault Admin
 
     ![The check box for Key Vault Admin is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image34.png "Key Vault Admin ")
 
-9.  Select **Enable**.
+9.  Select **Enable**
 
     ![Under quick steps, the Enable link is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image35.png "Enable link")
 
-10. In the dialog, select **enable multi-factor auth**.
+10. In the dialog, select **enable multi-factor auth**
 
     ![the enable multi-factor auth button is selected in the Dialog box.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image36.png "Dialog box")
 
-11. In the dialog, select **close**.
+11. In the dialog, select **close**
 
-12. Attempt to sign-in as the **KeyVaultAdmin user**.
+12. Attempt to sign-in as the **KeyVaultAdmin user**
 
-13. In the Azure portal, select Azure Active Directory.
+13. In the Azure portal, select Azure Active Directory
 
-    a.  Select Users, All Users, and select the Key Vault Admin user from the list.
+    a.  Select Users, All Users, and select the Key Vault Admin user from the list
 
-    b.  On the Key Vault Admin user blade, select **Reset Password**. \
+    b.  On the Key Vault Admin user blade, select **Reset Password**
+    
     ![On the Key Vault Admin user blade, Reset password is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image37.png "Reset password menu item")
 
-    c.  On the Reset password blade, select **Reset password**. \
+    c.  On the Reset password blade, select **Reset password**
+    
     ![On the Reset password blade, the Reset password button is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image38.png "Reset password blade")
 
-    d.  Copy the Temporary password for use in the next step. \
+    d.  Copy the Temporary password for use in the next step
+    
     ![On the Reset password blade, a message that the password has been reset is displayed, and the Temporary password is selected and highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image39.png "Reset password blade")
 
-14. Open an InPrivate or Incognito browser window, navigate to <http://login.microsoftonline.com> and enter the **username** and **password** for the KeyVaultAdmin account.
+14. Open an InPrivate or Incognito browser window, navigate to <http://login.microsoftonline.com> and enter the **username** and **password** for the KeyVaultAdmin account
 
-15. You will be prompted to setup additional security, select **Set it up now**.
+15. You will be prompted to setup additional security, select **Set it up now**
 
     ![On the Portal page, the Set it up now button is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image40.png "Portal page")
 
-16. Select **Mobile app in the dropdown**.
+16. Select **Mobile app in the dropdown**
 
     ![Under Step 1, How should we contact you, Mobile app is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image41.png "Step 1 drop-down")
 
-17. Select **Use verification code**.
+17. Select **Use verification code**
 
     ![Under Additional security verification, Use verification code is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image42.png "Additional security verification")
 
-18. Select **Set up**.
+18. Select **Set up**
 
-19. Depending on your mobile device, download the Microsoft Authenticator application from the respective app store.
+19. Depending on your mobile device, download the Microsoft Authenticator application from the respective app store
 
-20. Scan the image on the page to add the credentials to your authenticator app.
+20. Scan the image on the page to add the credentials to your authenticator app
 
     ![In the Configure mobile app section, instructions are to scan the QR code.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image43.png "Configure mobile app section")
 
-21. Select **Next**, the page will validate that you in fact added the account.
+21. Select **Next**, the page will validate that you in fact added the account
 
     ![The Validation page displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image44.png "Validation page")
 
-22. Select **Next**, enter the **validation code** from the mobile app.
+22. Select **Next**, enter the **validation code** from the mobile app
 
     ![Step 2, Enter the verification code section displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image45.png "Enter verification code")
 
-23. Select **Verify**.
+23. Select **Verify**
 
-24. On the Additional security verification, select your country, and enter your mobile phone number, then select **Next**. \
+24. On the Additional security verification, select your country, and enter your mobile phone number, then select **Next**
+
     ![On the Additional security verification screen, the country is selected, and a mobile phone number is entered into the Step 3 textbox. The Next button is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image46.png "Multi-factor authentication additional security verification screen - Step 3")
 
-25. On the next screen, copy the password provided, and select **Done**. \
+25. On the next screen, copy the password provided, and select **Done**
+
     ![On the Additional security verification screen, Step 4, the app password is displayed, and Done is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image47.png "Multi-factor authentication additional security verification screen - Step 4")
 
-26. Enter the Authenticator app code on the next screen and select **Verify**. \
+26. Enter the Authenticator app code on the next screen and select **Verify**
+
     ![On the Microsoft login dialog, an Authenticator app code is entered, and Verify is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image48.png "Enter code")
 
-27. If prompted, on the **Update your password page**, update your password.
+27. If prompted, on the **Update your password page**, update your password
 
-    e.  NOTE: The Current password will be the value you copied after resetting the password in Azure AD.
+    a.  NOTE: The Current password will be the value you copied after resetting the password in Azure AD.
 
-28. Select **Sign in**.
+28. Select **Sign in**
 
-29. If prompted, close the **Welcome to Microsoft Azure** dialog.
+29. If prompted, close the **Welcome to Microsoft Azure** dialog
 
 ## Exercise 2: Securing Azure Key Vault with Azure IAM
 
@@ -386,30 +396,31 @@ Duration: 45 minutes
 
 Synopsis: In this exercise, attendees will learn how to create various roles for managing the Azure Key Vault.
 
-> NOTE: If you are using a corporate Azure instance and do not have access to Active Directory, you must skip this Exercise and move to Exercise 3.**
+> NOTE: If you are using a corporate Azure instance and do not have access to Active Directory, you must skip this Exercise and move to Exercise 3.
 
 ### Task 1: Create a new Azure Key Vault
 
 In this task, you will create a new Azure Key Vault.
 
-1.  In your InPrivate or Incognito browser window, log into the Azure portal using the **KeyVaultAdmin** account.
+1.  In your InPrivate or Incognito browser window, log into the Azure portal using the **KeyVaultAdmin** account
 
-2.  In the Search box at the top of the Azure portal, search for "key vault" box, and select **Key vaults** from the results. \
+2.  In the Search box at the top of the Azure portal, search for "key vault" box, and select **Key vaults** from the results.
+
     ![\"Key vault\" is entered In the Azure search field, and Key vaults is selected from the search results.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image49.png "Azure search box for Key Vault")
 
-3.  On the Key vaults blade, select +**Add**.
+3.  On the Key vaults blade, select +**Add**
 
     ![In the Key vaults blade top menu, the Add button is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image50.png "Key vaults blade")
 
-4.  You should get a message that you must have admin access to create a key vault.
+4.  You should get a message that you must have admin access to create a key vault
 
     ![In the Get an Azure subscription pop-up, a message displays saying you need admin access.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image51.png "Get an Azure subscription pop-up")
 
-5.  Return to the Azure portal browser window where you are logged in with your subscription admin account, not the Incognito window where the Key Vault Admin account is logged in.
+5.  Return to the Azure portal browser window where you are logged in with your subscription admin account, not the Incognito window where the Key Vault Admin account is logged in
 
-6.  As in step 2 above, search for **Key vaults** and navigate to the Key Vaults blade.
+6.  As in step 2 above, search for **Key vaults** and navigate to the Key Vaults blade
 
-7.  Select **+Add**.
+7.  Select **+Add**
 
     ![In the Key vaults blade top menu, the Add button is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image50.png "Key vaults blade")
 
@@ -421,23 +432,25 @@ In this task, you will create a new Azure Key Vault.
 
     c.  **Resource group**: Select your existing resource group
 
-    d.  Leave Pricing tier and Access policies set to their default values\
+    d.  Leave Pricing tier and Access policies set to their default values
+    
     ![In the Dialog box, fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image52.png "Dialog box")
 
-9.  Select **Create**.
+9.  Select **Create**
 
 ### Task 2: Assign IAM based Azure Key Vault permissions
 
 In this task, you use Access control (IAM) to assign role-based access control (RBAC) permissions to the key vault you created in the previous task.
 
-1.  When the Key vault has finished provisioning, you will receive a notification in the Azure portal. In the notification, select **Go to resource**. \
+1.  When the Key vault has finished provisioning, you will receive a notification in the Azure portal. In the notification, select **Go to resource**.
+
     ![Azure notifications dialog is expanded, and the notification that the Key vault deployment succeeded is displayed. The Go to resource button is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image53.png "Azure Notifications Menu")
 
-2.  Select **Access control (IAM)**.
+2.  Select **Access control (IAM)**
 
     ![In the Azure Portal, under search results, passsecuritykeyvault.cjg is selected, as is Access control (IAM).](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image54.png "Azure Portal")
 
-3.  Select **+Add**.
+3.  Select **+Add**
 
     ![In the Key Vault blade top menu, the Add button is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image55.png "Key Vault blade")
 
@@ -447,138 +460,143 @@ In this task, you use Access control (IAM) to assign role-based access control (
 
     b.  **Assign access to**: Leave set to Azure AD user, group, or application
 
-    c. **Select**: Search for and select the **KeyVaultAdmin** user. \
+    c. **Select**: Search for and select the **KeyVaultAdmin** user
   
     ![In the Add permissions blade, the values above are entered into the specified fields.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image56.png "Add permissions blade")
 
-5.  Select **Save**.
+5.  Select **Save**
 
-6.  Select **+Add** again.
+6.  Select **+Add** again
 
 7.  In the Add permissions blade, enter:
 
-    c.  **Role:** Select **Reader**
+    a.  **Role:** Select **Reader**
 
-    d.  **Assign access to**: Leave set to Azure AD user, group, or application
+    b.  **Assign access to**: Leave set to Azure AD user, group, or application
 
-    e.  **Select**: Search for and select the **KeyVaultAuditor** user. \
+    c.  **Select**: Search for and select the **KeyVaultAuditor** user
   
     ![In the Add permissions blade, the values above are entered into the specified fields.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image57.png "Add permissions blade")
 
-8.  Select **Save**.
+8.  Select **Save**
 
 ### Task 3: Assign access policy based Azure Key Vault permissions
 
 In this task, you will add Access policies to the Azure Key Vault, to set the permissions of individual users within the key vault.
 
-1.  On the new key vault blade, select **Access Policies** from the left-hand menu under SETTINGS.
+1.  On the new key vault blade, select **Access Policies** from the left-hand menu under SETTINGS
 
     ![Access policies is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image58.png "Access policies")
 
-2.  Select **Click to show advanced access policies**.\
+2.  Select **Click to show advanced access policies**
+
     ![In the Key vault blade, the link to Click to show advanced access policies is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image59.png "Key vault blade")
 
-3.  Check the boxes for all items.\
+3.  Check the boxes for all items
+
     ![The check boxes to enable access to Azure Virtual Machines, Resource Manager, and Disk Encryption are selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image60.png "Enabling access check boxes")
 
-4.  Select **Save**.
+4.  Select **Save**
 
-1.  Select **+ Add new**.
+5.  Select **+ Add new**
 
 6.  On the Add access policy blade, enter the following:
 
-    a.  Select **Select principal**.
+    a.  Select **Select principal**
 
-    - Search for and select **Key Vault Auditor**.
-    - Select **Select**.
+    - Search for and select **Key Vault Auditor**
+    - Select **Select**
 
-    b.  **Key permissions**: Check **List**.
+    b.  **Key permissions**: Check **List**
 
-    c.  **Secret permissions**: Check **List**.
+    c.  **Secret permissions**: Check **List**
 
-    d.  **Certificate permissions**: Check **List**. \
+    d.  **Certificate permissions**: Check **List**
+    
     ![The Add access policy blade is displayed, with the values specified above entered into the appropriate fields. On the Principal blade on the right, Key Vault Auditor is entered into the Select field, and Key Vault Auditor is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image61.png "Add access policy blade")
 
-7.  Select **OK**.
+7.  Select **OK**
 
 ### Task 4: Verify Azure Key Vault permissions
 
 In this task, you will log in with the three different Azure AD user accounts you created previously and observe the impact of the IAM and Access policy permissions you set above.
 
-1.  Return to your InPrivate or Incognito browser window, and login as the **KeyVaultAdmin**.
+1.  Return to your InPrivate or Incognito browser window, and login as the **KeyVaultAdmin**
 
-2.  Search for and select **Key vaults**.
+2.  Search for and select **Key vaults**
 
-3.  You should now see the key vault displayed, select it.
+3.  You should now see the key vault displayed, select it
 
-4.  Select **Keys**, you should get a warning that the **List** operation is not assigned.
+4.  Select **Keys**, you should get a warning that the **List** operation is not assigned
 
     > NOTE: IAM permissions are different than Azure Key Vault access policies.
 
     ![In the Key vault blade, under settings, Keys is selected. The message saying that the operation \"List\" is not enabled in this key vault access policy displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image62.png "Key vault blade")
 
-5.  Select **Access policies**, then select **+Add new**.\
+5.  Select **Access policies**, then select **+Add new**
+
     ![In the Azure Portal, under Settings, Access policies is selected. In the Access policies blade top menu, Add new is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image63.png "Azure Portal")
 
 6.  On the Add access policy blade, enter the following:
 
-    b.  Select **Select principal**.
+    a.  Select **Select principal**.
 
-        i.  Search for and select **Key Vault Admin**.
+    -  Search for and select **Key Vault Admin**
+    -  Select **Select**
 
-        ii. Select **Select**.
+    b.  For the **Key permissions**, check **Select all**
 
-    c.  For the **Key permissions**, check **Select all**.
+    c.  For the **Secret permissions**, check **Select all**
 
-    d.  For the **Secret permissions**, check **Select all**.
-
-    e.  For the **Certificate permissions**, check **Select all**. \
+    d.  For the **Certificate permissions**, check **Select all**
+    
     ![The Add access policy blade is displayed, with the values specified above entered into the appropriate fields. On the Principal blade on the right, Key Vault Admin is entered into the Select field, and Key Vault Admin is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image64.png "Add access policy blade")
 
-7.  Select **OK**.
+7.  Select **OK**
 
-8.  Select **Save**.
+8.  Select **Save**
 
-9.  Select **Keys** again from the left-hand menu, and you should now see the error disappear.
+9.  Select **Keys** again from the left-hand menu, and you should now see the error disappear
 
-10. In your InPrivate or Incognito browser window, logoff and login as the **KeyVaultDeveloper**.
+10. In your InPrivate or Incognito browser window, logoff and login as the **KeyVaultDeveloper**
 
     > NOTE: You will need to reset the password for the account, as you did in [Exercise 1, Task 3, Step 13](#task-3-enable-azure-identity-protection-features).
 
-    - Update the password, when prompted.
+    - Update the password, when prompted
 
-11. Search for and select **Key vaults**.
+11. Search for and select **Key vaults**
 
-12. You should not be able to see the key vault displayed.
+12. You should not be able to see the key vault displayed
 
-13. Log out.
+13. Log out
 
-14. Login as the **KeyVaultAuditor**.
+14. Login as the **KeyVaultAuditor**
     
     > NOTE: You will need to reset the password for the account, as you did in [Exercise 1, Task 3, Step 13](#task-3-enable-azure-identity-protection-features).
 
-    -  Update the password, when prompted.
+    -  Update the password, when prompted
 
-15. Search for and select **Key vaults**.
+15. Search for and select **Key vaults**
 
-16. You should be able to see the key vault displayed, select it.
+16. You should be able to see the key vault displayed, select it
 
-17. Select **Keys**, you should not get a warning.
+17. Select **Keys**, you should not get a warning
 
-18. Select **Access policies**.
+18. Select **Access policies**
 
-19. Select **+Add new**.
+19. Select **+Add new**
 
-20. Select **Select principal**.
+20. Select **Select principal**
 
-    -   Search for and select **Key Vault Developer**.
+    -   Search for and select **Key Vault Developer**
 
-    -   Select **Select**.
+    -   Select **Select**
 
-21. Notice the permission drop downs are greyed out! The Key Vault Auditor only has read permission therefore they cannot assign permissions to any other resources: \
+21. Notice the permission drop downs are greyed out! The Key Vault Auditor only has read permission therefore they cannot assign permissions to any other resources: 
+
     ![The Add access policy blade displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image65.png "Add access policy blade")
 
-22. Exit the Add access policy blade, discarding any changes.
+22. Exit the Add access policy blade, discarding any changes
 
 ## Exercise 3: Azure deployments using Azure Key Vault
 
