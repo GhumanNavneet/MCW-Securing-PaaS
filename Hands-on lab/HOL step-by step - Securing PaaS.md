@@ -244,7 +244,7 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     b.  **User name**, enter [KeyVaultAdmin@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAdmin@%3cyourdomain%3e.microsoftonline.com)
 
-    -   NOTE: Use the domain you recorded earlier
+    > NOTE: Use the domain you recorded earlier.
 
     c.  Select **Groups**
 
@@ -260,7 +260,7 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     b.  **User name**, enter [KeyVaultAuditor@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAuditor@%3cyourdomain%3e.microsoftonline.com)
 
-    -   NOTE: Use the domain you recorded earlier
+    > NOTE: Use the domain you recorded earlier
 
     c.  Select **Groups**
 
@@ -384,7 +384,7 @@ In this task, you will enable multi-factor authentication on the Key Vault Admin
 
 27. If prompted, on the **Update your password page**, update your password
 
-    a.  NOTE: The Current password will be the value you copied after resetting the password in Azure AD.
+    > NOTE: The Current password will be the value you copied after resetting the password in Azure AD.
 
 28. Select **Sign in**
 
@@ -1113,9 +1113,9 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![The Select principal section displays with zero key permissions selected, 2 secret permissions, and zero certificate permissions selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image112.png "Select principal section")
 
-7.  Select **OK**.
+7.  Select **OK**
 
-8.  Select **Save**.
+8.  Select **Save**
 
 ### Task 4: Install NuGet packages
 
@@ -1197,7 +1197,7 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
 9.  Switch to your jump VM that is running inside your Azure subscription
 
-    a.  NOTE: You cannot publish from outside the Azure Virtual Network to an internal ASE
+    > NOTE: You cannot publish from outside the Azure Virtual Network to an internal ASE.
 
 10. Open the extracted folder **\\WebApp\\FourthCoffeeWeb.sln**
 
