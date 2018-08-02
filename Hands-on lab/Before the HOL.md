@@ -47,15 +47,15 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 ## Contents
 
-- [Task 1: Download GitHub resources - Jump Machine](#task-1-download-github-resources-jump-machine)
+- [Task 1: Download GitHub resources for Jump Machine](#task-1-download-github-resources-for-jump-machine)
 - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
-- [Task 3: Download GitHub resources - Jump machine](#task-3-download-github-resource-jump-machine)
+- [Task 3: Download GitHub resources for Jump machine](#task-3-download-github-resource-for-jump-machine)
 - [Task 4: Install SQL Server Management Studio](#task-4-install-sql-server-management-studio)
 - [Task 5: Install Fiddler](#task-5-install-fiddler)
 - [Task 6: Install Power BI Desktop](#task-6-install-power-bi-desktop)
 - [Next steps](#next-steps)
 
-### Task 1: Download GitHub resources - Jump machine
+### Task 1: Download GitHub resources for Jump machine
 
 In this task, you will download the Azure Resource Manager (ARM) template required to setup this lab from a GitHub repository.
 
@@ -141,7 +141,7 @@ In this task, you will run the ARM template downloaded in the previous task in t
 
 15. See Appendix A for detailed steps on creating these components without using an ARM template
 
-### Task 3: Download GitHub resources - Jump machine
+### Task 3: Download GitHub resources for Jump machine
 
 In this task, you will log into the lab VM that was created by the ARM template you executed in the previous task and download the GitHub resources needed to complete this hands-on lab.
 
@@ -246,3 +246,12 @@ Below, you will install Power BI on the jump VM, which will be used in Exercise 
    ![The Completed the Microsoft Power BI Desktop screen is displayed, with the \"Launch Microsoft Power BI Desktop\" checkbox unchecked, and the Finish button highlighted.](images/Setup/image24.png "Power BI Desktop installer complete screen")
 
 You should follow all steps provided *before* attending the Hands-on lab.
+
+## Next steps
+
+You are now ready to complete the hands-on lab. Select a guide below to get started, or you can return to the overview page for the lab.
+
+- Complete Hands-on lab
+  - [Step-by-step guide](https://github.com/Microsoft/MCW-Securing-PaaS/blob/master/Hands-on%20lab/HOL%20step-by%20step%20-%20Securing%20PaaS.md)
+  - [Unguided guide](https://github.com/Microsoft/MCW-Securing-PaaS/blob/master/Hands-on%20lab/HOL%20unguided%20-%20Securing%20PaaS.md)
+- Return to [Hands-on lab readme](https://github.com/Microsoft/MCW-Securing-PaaS/blob/master/README.md)
