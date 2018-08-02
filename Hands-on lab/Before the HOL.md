@@ -27,23 +27,17 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
-1.  Microsoft Azure subscription must be pay-as-you-go or MSDN
-
-    -   Trial subscriptions will not work
-
-2.  A machine with the following software:
-
+- Microsoft Azure subscription must be pay-as-you-go or MSDN
+  - Trial subscriptions will not work
+- A machine with the following software:
     -   Visual Studio 2017 Community edition or greater
-
     -   SQL Server Management Studio 2017
-
     -   Power BI Desktop
-
     -   Fiddler
 
-3.  **To ensure you can begin the course delivery on-time, you must take the following step at least 5-hours prior to the course start time:**
+**To ensure you can begin the course delivery on-time, you must take the following step at least 5-hours prior to the course start time:**
 
-    -   **Run the Azure resource template -- The Application Service Environment can take more than 90-minutes to create**
+    **Run the Azure resource template -- The Application Service Environment can take more than 90-minutes to create**
 
 ## Before the hands-on lab
 
@@ -51,7 +45,17 @@ Duration: 30 minutes
 
 Synopsis: In this exercise, you will set up your environment for use in the rest of the hands-on lab. You should follow all the steps provided in the Before the Hands-on Lab section to prepare your environment *before* attending the workshop.
 
-### Task 1: Download GitHub resources (Jump machine)
+## Contents
+
+- [Task 1: Download GitHub resources - Jump Machine](#task-1-download-github-resources-jump-machine)
+- [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
+- [Task 3: Download GitHub resources - Jump machine](#task-3-download-github-resource-jump-machine)
+- [Task 4: Install SQL Server Management Studio](#task-4-install-sql-server-management-studio)
+- [Task 5: Install Fiddler](#task-5-install-fiddler)
+- [Task 6: Install Power BI Desktop](#task-6-install-power-bi-desktop)
+- [Next steps](#next-steps)
+
+### Task 1: Download GitHub resources - Jump machine
 
 In this task, you will download the Azure Resource Manager (ARM) template required to setup this lab from a GitHub repository.
 
@@ -63,7 +67,7 @@ In this task, you will download the Azure Resource Manager (ARM) template requir
 
 3.  Extract the zip file to your local machine, be sure to keep note of where you have extracted the files
 
-### Task 2: Deploy resources (virtual machine, etc.) to Azure
+### Task 2: Deploy resources to Azure
 
 In this task, you will run the ARM template downloaded in the previous task in the Azure portal to provision the resources you will be using throughout this hands-on lab.
 
@@ -137,7 +141,7 @@ In this task, you will run the ARM template downloaded in the previous task in t
 
 15. See Appendix A for detailed steps on creating these components without using an ARM template
 
-### Task 3: Download GitHub resources (Jump machine)
+### Task 3: Download GitHub resources - Jump machine
 
 In this task, you will log into the lab VM that was created by the ARM template you executed in the previous task and download the GitHub resources needed to complete this hands-on lab.
 
