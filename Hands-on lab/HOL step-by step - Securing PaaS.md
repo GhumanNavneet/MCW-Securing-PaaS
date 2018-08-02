@@ -248,7 +248,7 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     c.  Select **Groups**
 
-    d. Select **Key Vault Mgmt Admins**, select
+    d. Select **Key Vault Mgmt Admins**, click **Select**
 
     e.  Select **Create**
 
@@ -264,7 +264,7 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     c.  Select **Groups**
 
-        ii. Select **Key Vault Mgmt Admins**, select.
+        ii. Select **Key Vault Mgmt Admins**, click **Select**
 
     d.  Select **Create**
 
@@ -276,7 +276,7 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     > NOTE: Use the domain you recorded earlier.
 
-    c.  NOTE: No groups will be assigned to this user.
+    > NOTE: No groups will be assigned to this user.
 
     d.  Select **Create**
 
@@ -284,7 +284,7 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
 In this task, you will enable multi-factor authentication on the Key Vault Admin account you created in the previous task to demonstrate the Identity Protection features of Azure.
 
-1.  Select your Active Directory
+1.  In the Azure Portal, find and select your Azure Active Directory resource
 
 2.  Select **MFA Server**
 
