@@ -49,7 +49,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 - [Task 1: Download GitHub resources for Jump Machine](#task-1-download-github-resources-for-jump-machine)
 - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
-- [Task 3: Download GitHub resources for Jump machine](#task-3-download-github-resource-for-jump-machine)
+- [Task 3: Download GitHub resources for Jump machine](#task-3-download-github-resources-for-jump-machine)
 - [Task 4: Install SQL Server Management Studio](#task-4-install-sql-server-management-studio)
 - [Task 5: Install Fiddler](#task-5-install-fiddler)
 - [Task 6: Install Power BI Desktop](#task-6-install-power-bi-desktop)
