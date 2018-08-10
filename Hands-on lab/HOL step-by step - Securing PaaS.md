@@ -83,49 +83,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives 
 
-This workshop is designed to provide exposure to many of Microsoft Azure's Platform-as-a-Service (PaaS) security features. The goal is to show a secure end-to-end solution that addresses concerns around sensitive data, controlling access to sensitive stores of information, controlling access to production systems and enabling secure processes for developers. The architecture includes:
+In this hands-on-lab, you will design an end-to-end PaaS solution that combines many of Azure's security features, while protecting sensitive data from both internal and external users.
 
--   App Service Environments
-
--   Application Gateway
-
--   Web Application Firewall
-
--   Azure Web Apps
-
--   Azure Functions
-
--   Azure API Apps
-
--   Azure SQL DB and corresponding security features
-
--   Azure Storage
-
--   Cosmos DB
-
--   Azure Search
-
--   Azure Monitor
-
--   Log Analytics
-
--   App Insights
-
--   Azure Security Center
-
--   Azure Key Vault Integrations
-
--   Azure Web Application Gateway
-
--   Azure Active Directory
-
-Attendees will learn how to:
-
--   Build secure solutions end to end with Azure PaaS services
-
--   Control access to PaaS service
-
--   Manage secrets and keys used by PaaS services
+At the end of this hands-on lab, you will be better able to develop a secure solution that takes advantage of the security features provided by an App Service Environment (ASE). You will know how to use an Azure DevOps machine and Visual Studio to deploy to the ASE after creating an app service plan. You will know how to enable a Web Application Firewall to filter requests based on the OWASP 3.0 standard and see that those requests are in fact blocked. In addition, you will know how Azure Identity Access and Management (Azure IAM) works and how those access permissions are separate from policies that may live within the actual Azure resource (such as with Azure Key Vault). You will learn how to remove sensitive information from your various resources such as Azure Functions and Web Applications and place them in the Azure Key Vault for both deployment and runtime use. As a final step, you will learn how to perform queries against Log Analytics to populate a Power BI report based on your Web Application Firewall events.
 
 ## Overview
 
