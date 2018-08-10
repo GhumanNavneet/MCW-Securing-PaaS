@@ -180,49 +180,9 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives 
 
-This workshop is designed to provide exposure to many of Microsoft Azure's PaaS security features. The goal is to show a secure end-to-end solution that addresses concerns around a sensitive data, controlling access to sensitive stores of information, controlling access to production systems and enabling secure processes for developers. The architecture includes:
+In this whiteboard design session, you will work with a group to design an end-to-end PaaS solution that combines many of Azure's security features, while protecting sensitive data from both internal and external users.
 
--   App Service Environments
-
--   Application Gateway
-
--   Web Application Firewall
-
--   Azure Web Apps
-
--   Azure Functions
-
--   Azure API Apps
-
--   Azure SQL DB and corresponding security features
-
--   Azure Storage
-
--   Cosmos DB
-
--   Azure Search
-
--   Azure Monitor
-
--   Log Analytics
-
--   App Insights
-
--   Azure Security Center
-
--   Azure Key Vault Integrations
-
--   Azure Web Application Gateway
-
--   Azure Active Directory
-
-Attendees will learn how to:
-
--   Build secure solutions end to end with Azure PaaS services
-
--   Control access to PaaS service
-
--   Manage secrets and keys used by PaaS services
+At the end of this whiteboard design session, you will be better able to design secure PaaS-based solutions that protect your systems and data from both internal and external threats.
 
 ## Step 1: Review the customer case study 
 
