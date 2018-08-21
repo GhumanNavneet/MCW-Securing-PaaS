@@ -224,9 +224,9 @@ In this task, you will create multiple Azure AD user accounts that will be used 
 
     c.  Select **Groups**
 
-        ii. Select **Key Vault Mgmt Admins**, click **Select**
+    d.  Select **Key Vault Mgmt Admins**, click **Select**
 
-    d.  Select **Create**
+    e.  Select **Create**
 
 7.  Select **+New user** again
 
@@ -284,7 +284,7 @@ In this task, you will enable multi-factor authentication on the Key Vault Admin
 
 13. In the Azure portal, select Azure Active Directory
 
-    a.  Select Users, All Users, and select the Key Vault Admin user from the list
+    a.  Select Users, All Users, and select the **Key Vault Admin** user from the list
 
     b.  On the Key Vault Admin user blade, select **Reset Password**
     
@@ -356,7 +356,7 @@ Duration: 45 minutes
 
 Synopsis: In this exercise, attendees will learn how to create various roles for managing the Azure Key Vault.
 
-> NOTE: If you are using a corporate Azure instance and do not have access to Active Directory, you must skip this Exercise and move to Exercise 3.
+> NOTE: If you are using a corporate Azure instance and do not have access to administrative access to Active Directory, you must skip this Exercise and move to Exercise 3.  You can ask your administrations to setup [Azure administrative units](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-administrative-units) to support this workshop.
 
 ### Task 1: Create a new Azure Key Vault
 
@@ -477,6 +477,8 @@ In this task, you will add Access policies to the Azure Key Vault, to set the pe
 
 7.  Select **OK**
 
+8.  Select **Save**
+
 ### Task 4: Verify Azure Key Vault permissions
 
 In this task, you will log in with the three different Azure AD user accounts you created previously and observe the impact of the IAM and Access policy permissions you set above.
@@ -584,7 +586,7 @@ In this task, you will add two secrets to the key vault.
 
     a.  **Upload options**: Select **Manual**
 
-    b.  **Name**: Enter **VMUsername**
+    b.  **Name**: Enter **SQLUsername**
 
     c.  **Value**: Enter **AzureKVAdmin**
     
@@ -598,9 +600,9 @@ In this task, you will add two secrets to the key vault.
 
     a.  **Upload options**: Select **Manual**
 
-    b.  **Name**: Enter **VMPassword**
+    b.  **Name**: Enter **SQLPassword**
 
-    c.  **Value**: Enter **DevsC\@ntSeeTh**
+    c.  **Value**: Enter **DevsC\@ntSeeThis**
     
     ![Fields in the Create a secret blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image68.png "Create a secret")
 
@@ -608,13 +610,13 @@ In this task, you will add two secrets to the key vault.
 
 11. You should now see two secrets in your Azure Key Vault: 
 
-    ![In the Azure Key vault, the two secrets, VMPassword and VMUsername are displayed.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image69.png "Secrets list")
+    ![In the Azure Key vault, the two secrets, SQLUsername and SQLPassword are displayed.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image69.png "Secrets list")
 
 ### Task 2: Deploy an ARM template using Azure Key Vault resources
 
 In this task, you will run another ARM template using PowerShell to create a SQL database which can use the key vault resources.
 
-1.  Open a **Windows PowerShell ISE** window
+1.  In your Azure Virtual machine, open a **Windows PowerShell ISE** window
 
 2.  Open the extracted **\\AzureTemplate\\deploy-securingpaas.ps1**
 
@@ -743,7 +745,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 17. On the **Database Settings** dialog, select **Next**
 
-    >  NOTE: If you get an error, close and re-open SSMS and try the import again.
+    >  NOTE: If you get an error, close and re-open SSMS and try the import again. This can happen when you use a non-fresh installed SQL Managemnet Studio and have reminents of older verions.
 
     ![In the Verify Specified Settings section, both Source and Target are expanded.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image81.png "Verify Specified Settings section")
 
@@ -947,9 +949,9 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![In the Azure portal left-hand navigation menu, SQL Database is highlighted, and the FourthCoffee SQL Database is highlighted and selected on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image100.png "Azure portal SQL databases list")
 
-2.  Select **Auditing & Threat Detection**
+2.  Select **Auditing**
 
-    ![Under Settings, Auditing and Threat Detection is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image101.png "Settings section")
+    ![Under Settings, Auditing is selected and the button is toggeled to ON.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image101.png "Settings section")
 
 3.  For Auditing, toggle to **ON**
 
@@ -959,17 +961,17 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 6.  Select **OK**
 
-7.  For Threat Detection, toggle to **ON**
+7.  Select **Save**
 
-    ![In the Threat Detection section, both Auditing and Threat Detection are set to On, and the Save button is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image102.png "Threat Detection section")
+8.  In the **FourthCoffe** blade, select **Advanced Thread Protection**
 
-8.  Enter your email address
+9.  Select **Enable Advanced Threat Protection on the server** button
 
-9.  Select **Save**
+    ![The Advanced Threat Protection is highlighted in the blade and the Enable Advanced Threat Protection button is highlighted on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image102.png "Threat Protection section")
 
 ### Task 6: Ensure SQL Azure Transparent Data Encryption (TDE) is enabled
 
-1.  Select **Transparent data encryption**
+1.  In the **FourthCoffee** blade, select **Transparent data encryption**
 
 2.  For data encryption, ensure that the toggle is set to **ON**
 
@@ -977,7 +979,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![Data encryption is set to on.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image103.png "Data encryption status")
 
-3.  Select **Save**
+3.  If you toggled the button, select **Save**
 
     ![The Save button is selected in the SQL database blade.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image104.png "SQL database blade")
 
@@ -1079,7 +1081,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 ### Task 4: Install NuGet packages
 
-1.  Switch to **Visual Studio**
+1.  Switch to **Visual Studio**, close the current solution.  Open the FourthCoffeeAPI_KeyVault solution
 
 2.  In the menu, select **View-\>Other Windows-\>Package Manager Console**
 
@@ -1123,7 +1125,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![In the global.asax.cs file, the EncryptSecret = sec.Value line is called out.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image115.png "global.asax.cs file")
 
-6.  Press **F5**, and navigate to [http://localhost:\[PORT-NUMBERportno\]/api/CustomerAccounts](http://localhost:[PORT-NUMBER]/api/CustomerAccounts), you should see your data displayed
+6.  Press **F5**, and navigate to [http://localhost:\[PORT-NUMBER\]/api/CustomerAccounts](http://localhost:[PORT-NUMBER]/api/CustomerAccounts), you should see your data displayed
 
 ## Exercise 6: Securing PaaS web applications with App Service Environment and Web Application Firewall 
 
@@ -1185,11 +1187,11 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
 17. Select your resource group
 
-18. For App Service Plan, select the **fourthcoffeeweb-\[your initials\]**
+18. For App Service Plan, select the **paassecurity-\[your initials\]**
 
     ![Fields on the Create App Service page are set to the previously defined settings.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image121.png "Create App Service page")
 
-19. Select **Create**
+19. Select **Create**, in the publish window, copy the url of the deployment url
 
     > NOTE: In some versions of Visual Studio, you may need to do this twice.
 
@@ -1209,7 +1211,7 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
     f.  On your jump VM, open **Notepad as an administrator**
 
-    g.  Open the c:\\windows\\system32\\drivers\\etc\\hosts file, add the following:
+    g.  Open the c:\\windows\\system32\\drivers\\etc\\hosts file, add the url you copied from the publish window above:
 
     ![The Fourthcoffeeweb host entry data to be added displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image123.png "Hosts file")
 
@@ -1235,7 +1237,7 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
 ### Task 2: Configure the Web Application Firewall
 
-1.  Select **Application Gateway**
+1.  Switch back to the Azure Portal, select **Application gateways**
 
 2.  Select your application gateway
 
@@ -1249,17 +1251,19 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
     ![The Backend pool IP address for appGatewayBackendPool displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image129.png "Backend pool IP address")
 
-6.  Select **Health probes**
+6.  Close the dialog, then select **Health probes**
 
 7.  Select **+Add**
 
-8.  Copy the web app DNS address into the name and host address
+8.  Copy the web app DNS address into the name and host address (do not copy the schema)
 
 9.  For the path, enter **/**
 
     ![The passsecurity-waf blade displays with the following field values: Host has the copied copied web app dns address; Protocol, HTTP; Path, /; Interval, 30 seconds; Timeout, 30 seconds; Unhealthy threshold, 3.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image130.png "passsecurity-waf blade")
 
-10. Select **OK** and then wait for the web application gateway to finish updating
+10. Select **OK** and then wait for the web application gateway to finish updating, this can take 5-10 minutes
+
+    > NOTE: If the operation fails, retry it
 
     > NOTE: If you do not wait, future actions may result in the following error:
 
@@ -1277,7 +1281,7 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
     ![A Dialog box displays with the following settings: Cookie-based affinity, Disabled; Request timeout, 30; Protocol, HTTP; Port, 80; Use custom probe, selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image132.png "Dialog box")
 
-15. Select **Save**, wait for the application gateway to finish updating
+15. Select **Save**, wait for the application gateway to finish updating again this could take 5-10 minutes
 
 ### Task 3: Enable Application Gateway logging
 
@@ -1327,7 +1331,7 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
     ![A script displays in the Windows PowerShell ISE window.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image136.png "Windows PowerShell ISE window")
 
-9.  The script will execute a series of attacks on the Azure web application. Although they won't technically be successful, they will make it to the web application. In Fiddler, you will be able to see the traffic is allowed, even known bad agents:
+9.  The script will execute a series of attacks on the Azure web application. Although they won't technically be successful, they will make it to the web application. In Fiddler, select the various request and then click the **Inspectors** tab.  You will be able to see the traffic is allowed, even known bad agents:
 
     ![One of the attacks is selected on the left, and the User-agent stalker is called out on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image137.png "Attack examples")
 
@@ -1355,7 +1359,7 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
     b.  Web application gateway DNS
 
-3.  In Fiddler, you should see that your attack is being prevented from making it to the web server. This will also generate logs that we will use to create attack assessment reports in later exercises. Again, with fiddler available you can see the denied traffic by selecting the Inspectors tab, then Headers in the top section, and Raw in the bottom section:
+3.  In Fiddler, you should see that your attack is being prevented from making it to the web server. This will also generate logs that we will use to create attack assessment reports in later exercises. Again, with fiddler available, you can see the denied traffic by selecting the Inspectors tab, then Headers in the top section, and Raw in the bottom section:
 
     ![One of the attacks is selected on the left, and a denied traffic example is called out on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image139.png "Fiddler network traffic")
 
@@ -1377,53 +1381,55 @@ Synopsis: In this exercise, attendees will learn how to use Azure Functions that
 
 5.  For **Storage**, select the storage account
 
-6.  Select **Create**
+6.  Select an **Application Insights Location**
 
-7.  Select **Function Apps**
+7.  Select **Create**
 
-8.  Once provisioning completes, select your new function app
+8.  Select **Function Apps**
 
-9.  Select the **Functions** node
+9.  Once provisioning completes, select your new function app by clicking **All services** then searching for "function" and then selecting **Function Apps**
 
-10. Select **New function**
+10.  Expand your new function app node, select the **Functions** node
+
+11. Select **New function**
 
     ![In the Function Apps blade, New function is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image140.png "Function Apps blade")
 
-11. Select **HTTP trigger**
+12. Select **HTTP trigger**
 
     ![Under Choose a template, the HTTP trigger tile is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image141.png "Choose a template section")
 
-12. For the **language** select **C\#**
+13. For the **language** select **C\#**
 
-13. Keep the name **HttpTriggerCSharp1**
+14. Keep the name **HttpTriggerCSharp1**
 
     ![Under Few Function, fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image142.png "New Function section")
 
-14. Select **Create**
+15. Select **Create**
 
-15. Open the extracted folder file **\\AzureFunction\\run.csx**
+16. Open the extracted folder file **\\AzureFunction\\run.csx**
 
-16. Copy the contents into the window
+17. Copy the contents into the window
 
     ![The Save button is selected in the run.csx window.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image143.png "run.csx window")
 
-17. Select **Save**
+18. Select **Save**
 
-18. Select **View Files**
+19. Select **View Files**
 
     > NOTE: You may need to scroll to the right to see the View Files tab.
 
-19. Select **+Add**
+20. Select **+Add**
 
-20. For the name, enter **project.json**
+21. For the name, enter **project.json**
 
     ![Screenshot of the Add button and the project.json file icon.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image144.png "Add button")
 
-21. Press **Enter**
+22. Press **Enter**
 
-22. Open the **\\AzureFunction\\project.json** file, copy the contents to the online version
+23. Open the **\\AzureFunction\\project.json** file, copy the contents to the online version
 
-23. Select **Save**
+24. Select **Save**
 
 ### Task 2: Create a Managed Service Identity
 
@@ -1445,7 +1451,7 @@ Synopsis: In this exercise, attendees will learn how to use Azure Functions that
 
 ### Task 3: Assign Managed Service Identity Azure Key Vault permissions
 
-1.  Select **Key vaults**
+1.  In the Azure Portal navigation, select **Key vaults**
 
 2.  Select your key vault
 
@@ -1541,7 +1547,11 @@ Synopsis: In this exercise, attendees will learn to utilize the Log Analytics fe
 
     ![In Log Analytics, under A few more queries to try, All collected data is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image158.png "Log Analytics")
 
-3.  Update the search textbox to be **search \* \| where Type == \"SecurityDetection**.**\"**
+3.  Update the search textbox to be:
+
+``` 
+search * | where Type == "SecurityDetection**.**"
+```
 
     > NOTE: If you wanted to see things that were specific from your IP address you can add **\| where ExtendedProperties contains "X.X.X.X"** to the query.
 

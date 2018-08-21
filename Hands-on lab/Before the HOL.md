@@ -37,7 +37,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 **To ensure you can begin the course delivery on-time, you must take the following step at least 5-hours prior to the course start time:**
 
-    **Run the Azure resource template -- The Application Service Environment can take more than 90-minutes to create**
+> **NOTE** The Application Service Environment (ASE) and Web Application Firewall (WAF) can take more than 90-minutes to create depending on the load in the region
 
 ## Before the hands-on lab
 
@@ -59,7 +59,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 In this task, you will download the Azure Resource Manager (ARM) template required to setup this lab from a GitHub repository.
 
-1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/givenscj/mcw-securing-paas>)
+1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/Microsoft/mcw-securing-paas>)
 
 2.  Select **Clone or download**, then select **Download Zip**
 
@@ -191,9 +191,9 @@ In this task, you will install SQL Server Management Studio (SSMS) on your Jump 
 
     ![On the SQL Server Management Studio download page, the Download SQL Server Management Studio 17.x link is highlighted.](images/Setup/image16.png "SSMS Download screen")
 
-3.  Run the downloaded installer
+3.  Run the downloaded installer by clicking **Run** in the browser popup
 
-4.  On the Welcome screen, select Install
+4.  On the Welcome screen, select **Install**
 
    ![The Microsoft SQL Server Management Studio installer welcome screen is displayed, and the Install button is highlighted.](images/Setup/image17.png "Microsoft SQL Server Management Studio installer")
 
@@ -219,29 +219,29 @@ Below, you will install Power BI on the jump VM, which will be used in Exercise 
 
 1.  In a web browser on you jump VM navigate to the Power BI Desktop download page (<https://powerbi.microsoft.com/en-us/desktop/>)
 
-2.  Select the Download Free link in the middle of the page
+2.  Select the **Download Free** link in the middle of the page
 
   ![The Power BI Desktop download screen is displayed, and Download Free is selected.](images/Setup/image19.png "Power BI Desktop download screen")
 
 3.  Run the installer
 
-4.  Select Next on the welcome screen
+4.  Select **Next** on the welcome screen
 
   ![The Welcome screen of the Power BI installer is displayed, with the Next button highlighted and selected.](images/Setup/image20.png "Power BI Desktop installer welcome screen")
 
-5.  Accept the license agreement, and select Next
+5.  Accept the license agreement, and select **Next**
 
    ![Screenshot of the Power BI Desktop Software License Terms screen is displayed, with the \"I accept the terms in the License Agreement\" checkbox checked, and the Next button selected.](images/Setup/image21.png "Power BI Desktop installer license terms screen")
 
-6.  Leave the default destination folder, and select Next
+6.  Leave the default destination folder, and select **Next**
 
   ![Screenshot of the Microsoft Power BI installer\'s Destination Folder screen, with the default path displayed, and the Next button highlighted.](images/Setup/image22.png "Power BI Desktop installer destination folder screen")
 
-7.  Make sure the Create a desktop shortcut box is checked, and select Install
+7.  Make sure the Create a desktop shortcut box is checked, and select **Install**
 
    ![Screenshot of the Microsoft Power BI installer\'s Ready to Install screen, with the \"Create a desktop shortcut\" checkbox checked, and the Install button highlighted.](images/Setup/image23.png "Power BI Desktop installer ready to install screen")
 
-8.  Uncheck Launch Microsoft Power BI Desktop, and select Finish
+8.  Uncheck **Launch Microsoft Power BI Desktop**, and select **Finish**
 
    ![The Completed the Microsoft Power BI Desktop screen is displayed, with the \"Launch Microsoft Power BI Desktop\" checkbox unchecked, and the Finish button highlighted.](images/Setup/image24.png "Power BI Desktop installer complete screen")
 
