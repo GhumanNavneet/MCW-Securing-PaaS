@@ -618,7 +618,7 @@ In this task, you will run another ARM template using PowerShell to create a SQL
 
 1.  In your Azure Virtual machine, open a **Windows PowerShell ISE** window
 
-2.  Open the extracted **\\AzureTemplate\\deploy-securingpaas.ps1**
+2.  Open the extracted **\\Hands-on lab\\AzureTemplate\\deploy-securingpaas.ps1**
 
     a.  Review the file, note the following:
 
@@ -634,7 +634,7 @@ In this task, you will run another ARM template using PowerShell to create a SQL
 
     d.  Save the file
 
-3.  Open the extracted **\\AzureTemplate\\azure-kv-sql-deploy.json** file, review it
+3.  Open the extracted **\\Hands-on lab\\AzureTemplate\\azure-kv-sql-deploy.json** file, review it
 
     a.  Notice that this file simply creates a virtual machine using the parameters passed in
 
@@ -642,7 +642,7 @@ In this task, you will run another ARM template using PowerShell to create a SQL
 
     c.  Save the file
 
-4.  Open the extracted **\\AzureTemplate\\azure-kv-parameters.json** file
+4.  Open the extracted **\\Hands-on lab\\AzureTemplate\\azure-kv-parameters.json** file
 
     a.  Notice how it makes a reference to your Azure Key Vault and secret to populate the parameters
 
@@ -761,13 +761,13 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 21. In **SSMS**, select **File-\>Open-\>File**
 
-22. Browse to the extracted GitHub folder, select the **\\Database\\00\_CreateLogin.ps1** file
+22. Browse to the extracted GitHub folder, select the **\\Hands-on lab\\Database\\00\_CreateLogin.ps1** file
 
 23. **Press F5** to run the script to create a login called **store**
 
 24. Ensure that the **FourthCoffee** database is selected
 
-25. Browse to the extracted folder, select the **\\Database\\01\_CreateUser.ps1** file
+25. Browse to the extracted folder, select the **\\Hands-on lab\\Database\\01\_CreateUser.ps1** file
 
 26. **Press F5** to run the script to create a non-admin user called **store**
 
@@ -991,7 +991,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 ### Task 1: Create an Azure Key Vault secret
 
-1.  From the extracted GitHub directory, open the **\\WebApp\\FourthCoffeeAPI\_KeyVault\\FourthCoffeeAPI.sln** solution
+1.  From the extracted GitHub directory, open the **\\Hands-on lab\\WebApp\\FourthCoffeeAPI\_KeyVault\\FourthCoffeeAPI.sln** solution
 
 2.  Switch to your Azure Portal
 
@@ -1161,7 +1161,7 @@ Synopsis: In this exercise, attendees will deploy a cloud web application with a
 
     > NOTE: You cannot publish from outside the Azure Virtual Network to an internal ASE.
 
-10. Open the extracted folder **\\WebApp\\FourthCoffeeWeb.sln**
+10. Open the extracted folder **\\Hands-on lab\\WebApp\\FourthCoffeeWeb.sln**
 
     a.  NOTE: You will need to provide an authorized MSDN Visual Studio licensed user
 
@@ -1407,7 +1407,7 @@ Synopsis: In this exercise, attendees will learn how to use Azure Functions that
 
 15. Select **Create**
 
-16. Open the extracted folder file **\\AzureFunction\\run.csx**
+16. Open the extracted folder file **\\Hands-on lab\\AzureFunction\\run.csx**
 
 17. Copy the contents into the window
 
@@ -1427,7 +1427,7 @@ Synopsis: In this exercise, attendees will learn how to use Azure Functions that
 
 22. Press **Enter**
 
-23. Open the **\\AzureFunction\\project.json** file, copy the contents to the online version
+23. Open the **\\Hands-on lab\\AzureFunction\\project.json** file, copy the contents to the online version
 
 24. Select **Save**
 

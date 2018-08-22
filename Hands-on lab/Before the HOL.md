@@ -97,7 +97,7 @@ In this task, you will run the ARM template downloaded in the previous task in t
 
 8.  Select **Build your own template in the editor**
 
-9.  In the extracted folder, open the **\\AzureTemplate\\azure-deploy.json**
+9.  In the extracted folder, open the **\\Hands-on lab\\AzureTemplate\\azure-deploy.json**
 
 10. Copy and paste it into the window
 
