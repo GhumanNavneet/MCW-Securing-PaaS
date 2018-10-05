@@ -10,9 +10,8 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-April 2018
+August 2018
 </div>
-
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
@@ -103,26 +102,26 @@ Separately, you will explore how Azure Identity Access and Management (Azure IAM
 
 As a final step, you will learn how to perform queries against **Log Analytics** to populate a **Power BI** report based on your **Web Application Firewall** events.
 
+
 ## Requirements
 
 1.  Microsoft Azure subscription must be pay-as-you-go or MSDN
 
-    -   Trial subscriptions will not work
-
+    - Trial subscriptions will *not* work.
+  
 2.  A machine with the following software:
 
     -   Visual Studio 2017 Community edition or greater
-
+    
     -   SQL Server Management Studio 2017
-
+    
     -   Power BI Desktop
-
+    
     -   Fiddler
 
-3.  **To ensure you can begin the course delivery on-time, you must take the following step at least 5-hours prior to the course start time:**
+**To ensure you can begin the course delivery on-time, you must take the following step at least 5-hours prior to the course start time:**
 
-    -   **Run the Azure resource template -- The Application Service Environment can take more than 90-minutes to create.**
-
+> **Note:** The Application Service Environment (ASE) and Web Application Firewall (WAF) can take more than 90-minutes to create depending on the load in the region.
 
 ## Exercise 1: Creating and securing Azure Active Directory accounts
 
@@ -130,225 +129,225 @@ Duration: 45 minutes
 
 Synopsis: In this exercise, attendees will learn how to create Azure Active Directory (Azure AD) groups and users and then securing them using multi-factor authentication.
 
-> NOTE: If you are using a corporate Azure instance and do not have access to Active Directory, you will not be able to complete this exercise, and should skip to [Exercise 3](#exercise-3-azure-deployments-using-azure-key-vault).
+>**Note**: If you are using a corporate Azure instance and do not have access to Active Directory, you will not be able to complete this exercise, and should skip to [Exercise 3](#exercise-3-azure-deployments-using-azure-key-vault).
 
 ### Task 1: Create Azure Active Directory groups
 
 In this task, you will create security groups in Azure AD to be used in exercises later in this hands-on lab.
 
-1.  Open your Azure Portal (<https://portal.azure.com>)
+1.  Open your Azure Portal (<https://portal.azure.com>).
 
-2.  Select **Azure Active Directory**
+2.  Select **Azure Active Directory**.
 
     ![The Azure Active Directory option displays in the Azure Portal.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image25.png "Azure Portal")
 
-3.  Select **Groups,** then select **All groups**
+3.  Select **Groups,** then select **All groups**.
 
    ![In the Azure Active Dirctory blade, under MANAGE, Groups is selected, and All groups is selected on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image26.png "Groups menu")
 
-4.  Select **+New group**
+4.  Select **+New group**.
 
     ![On the All groups blade top menu, New group is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image27.png "All groups blade")
 
 5.  On the Group blade, enter the following:
 
-    a.  **Group type**: Select **Security**
+    a.  **Group type**: Select **Security**.
 
-    b.  **Group name**: Enter **Key Vault Mgmt Admins**
+    b.  **Group name**: Enter **Key Vault Mgmt Admins**.
 
-    c.  **Group description**: Enter **Key Vault Mgmt Admins**
+    c.  **Group description**: Enter **Key Vault Mgmt Admins**.
 
-    d.  **Membership type**: select **Assigned**
+    d.  **Membership type**: Select **Assigned**.
     
     ![The Group blade displays with the previously defined settings entered into the appropriate fields.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image28.png "Create Group blade")
 
-6.  Select **Create** and close the dialog window if it does not close
+6.  Select **Create** and close the dialog window if it does not close.
 
-7.  Select **+New group** again
+7.  Select **+New group** again.
 
 8.  On the Group blade, enter the following:
 
-    a.  **Group type**: Select **Security**
+    a.  **Group type**: Select **Security**.
 
-    b.  **Group name**: Enter **Key Vault Key Admins**
+    b.  **Group name**: Enter **Key Vault Key Admins**.
 
-    c.  **Group description**: Enter **Key Vault Key Admins**
+    c.  **Group description**: Enter **Key Vault Key Admins**.
 
-    d.  **Membership type**: select **Assigned** 
+    d.  **Membership type**: Select **Assigned**.
     
     ![The Group blade displays with the previously defined settings entered into the appropriate fields.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image29.png "Create Group blade")
 
-9.  Select **Create** and close the dialog window if it does not close
+9.  Select **Create** and close the dialog window if it does not close.
 
 ### Task 2: Create Azure Active Directory accounts
 
 In this task, you will create multiple Azure AD user accounts that will be used within the exercises in this hands-on lab to demonstrate the various levels of permissions and access control with Azure resources.
 
-1.  Determine your Active Directory domain name
+1.  Determine your Active Directory domain name.
 
-    a.  Select **Azure Active Directory**
+    a.  Select **Azure Active Directory**.
 
-    b.  Select **Custom domain names**
+    b.  Select **Custom domain names**.
 
-    c.  Record the **\*.microsoftonline.com** domain name, you will use this later
+    c.  Record the **\*.microsoftonline.com** domain name, you will use this later.
 
-2.  Select **Users**, then select **All users**
+2.  Select **Users**, then select **All users**.
 
    ![In the Azure Active Dirctory blade, under MANAGE, Users is selected, and All users is selected on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image30.png "Users menu")
 
-3.  Select **+New user**
+3.  Select **+New user**.
 
 4.  On the User blade, enter the following:
 
-    a.  **Name**: enter **Key Vault Admin**
+    a.  **Name**: Enter **Key Vault Admin**.
 
-    b.  **User name**, enter [KeyVaultAdmin@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAdmin@%3cyourdomain%3e.microsoftonline.com)
+    b.  **User name**: Enter [KeyVaultAdmin@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAdmin@%3cyourdomain%3e.microsoftonline.com).
 
-    > NOTE: Use the domain you recorded earlier.
+    >**Note**: Use the domain you recorded earlier.
 
-    c.  Select **Groups**
+    c.  Select **Groups**.
 
-    d. Select **Key Vault Mgmt Admins**, click **Select**
+    d. Select **Key Vault Mgmt Admins**, click **Select**.
 
-    e.  Select **Create**
+    e.  Select **Create**.
 
-5.  Select **+New user** again
+5.  Select **+New user** again.
 
 6.  On the User blade, enter the following:
 
-    a.  **Name**: Enter **Key Vault Auditor**
+    a.  **Name**: Enter **Key Vault Auditor**.
 
-    b.  **User name**, enter [KeyVaultAuditor@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAuditor@%3cyourdomain%3e.microsoftonline.com)
+    b.  **User name**: Enter [KeyVaultAuditor@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultAuditor@%3cyourdomain%3e.microsoftonline.com).
 
-    > NOTE: Use the domain you recorded earlier
+    >**Note**: Use the domain you recorded earlier.
 
-    c.  Select **Groups**
+    c.  Select **Groups**.
 
-    d.  Select **Key Vault Mgmt Admins**, click **Select**
+    d.  Select **Key Vault Mgmt Admins**, click **Select**.
 
-    e.  Select **Create**
+    e.  Select **Create**.
 
-7.  Select **+New user** again
+7.  Select **+New user** again.
 
-    a.  **Name**, enter **Key Vault Developer**
+    a.  **Name**: Enter **Key Vault Developer**.
 
-    b.  **User name**, enter [KeyVaultDeveloper@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultDeveloper@%3cyourdomain%3e.microsoftonline.com)
+    b.  **User name**: Enter [KeyVaultDeveloper@\<yourdomain\>.microsoftonline.com](mailto:KeyVaultDeveloper@%3cyourdomain%3e.microsoftonline.com).
 
-    > NOTE: Use the domain you recorded earlier.
+    >**Note**: Use the domain you recorded earlier.
 
-    > NOTE: No groups will be assigned to this user.
+    >**Note**: No groups will be assigned to this user.
 
-    d.  Select **Create**
+    d.  Select **Create**.
 
 ### Task 3: Enable Azure Identity Protection features 
 
 In this task, you will enable multi-factor authentication on the Key Vault Admin account you created in the previous task to demonstrate the Identity Protection features of Azure.
 
-1.  In the Azure Portal, find and select your Azure Active Directory resource
+1.  In the Azure Portal, find and select your Azure Active Directory resource.
 
-2.  Select **MFA Server**
+2.  Select **MFA Server**.
 
     ![Under Security, MFA Server is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image31.png "MFA Server")
 
-3.  Select **Get Free Premium Trial**
+3.  Select **Get Free Premium Trial**.
 
-4.  Select the **AZURE AD PREMIUM P2** option, select **Free trial**
+4.  Select the **AZURE AD PREMIUM P2** option, select **Free trial**.
 
   ![The Azure AD Premium P2 tile is selected, and Free trial is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image32.png "Azure AD Premium P2 trial")
 
-5.  Select **Activate**
+5.  Select **Activate**.
 
-6.  Select **Users**, the select **All users**
+6.  Select **Users**, the select **All users**.
 
   ![In the Azure Active Dirctory blade, under MANAGE, Users is selected, and All users is selected on the right.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image30.png "Users menu")
 
-7.  Select **Multi-Factor Authentication**
+7.  Select **Multi-Factor Authentication**.
 
     ![The Multi-Factor Authentication option is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image33.png "Multi-Factor Authentication option")
 
-8.  Check the check box for the **Key Vault Admin** user
+8.  Check the check box for the **Key Vault Admin** user.
 
     ![The check box for Key Vault Admin is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image34.png "Key Vault Admin ")
 
-9.  Select **Enable**
+9.  Select **Enable**.
 
     ![Under quick steps, the Enable link is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image35.png "Enable link")
 
-10. In the dialog, select **enable multi-factor auth**
+10. In the dialog, select **enable multi-factor auth**.
 
     ![the enable multi-factor auth button is selected in the Dialog box.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image36.png "Dialog box")
 
-11. In the dialog, select **close**
+11. In the dialog, select **close**.
 
-12. Attempt to sign-in as the **KeyVaultAdmin user**
+12. Attempt to sign-in as the **KeyVaultAdmin user**.
 
-13. In the Azure portal, select Azure Active Directory
+13. In the Azure portal, select Azure Active Directory.
 
-    a.  Select Users, All Users, and select the **Key Vault Admin** user from the list
+    a.  Select Users, All Users, and select the **Key Vault Admin** user from the list.
 
-    b.  On the Key Vault Admin user blade, select **Reset Password**
+    b.  On the Key Vault Admin user blade, select **Reset Password**.
     
     ![On the Key Vault Admin user blade, Reset password is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image37.png "Reset password menu item")
 
-    c.  On the Reset password blade, select **Reset password**
+    c.  On the Reset password blade, select **Reset password**.
     
     ![On the Reset password blade, the Reset password button is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image38.png "Reset password blade")
 
-    d.  Copy the Temporary password for use in the next step
+    d.  Copy the Temporary password for use in the next step.
     
     ![On the Reset password blade, a message that the password has been reset is displayed, and the Temporary password is selected and highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image39.png "Reset password blade")
 
-14. Open an InPrivate or Incognito browser window, navigate to <http://login.microsoftonline.com> and enter the **username** and **password** for the KeyVaultAdmin account
+14. Open an InPrivate or Incognito browser window, navigate to <http://login.microsoftonline.com> and enter the **username** and **password** for the KeyVaultAdmin account.
 
-15. You will be prompted to setup additional security, select **Set it up now**
+15. You will be prompted to setup additional security, select **Set it up now**.
 
     ![On the Portal page, the Set it up now button is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image40.png "Portal page")
 
-16. Select **Mobile app in the dropdown**
+16. Select **Mobile app in the dropdown**.
 
     ![Under Step 1, How should we contact you, Mobile app is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image41.png "Step 1 drop-down")
 
-17. Select **Use verification code**
+17. Select **Use verification code**.
 
     ![Under Additional security verification, Use verification code is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image42.png "Additional security verification")
 
-18. Select **Set up**
+18. Select **Set up**.
 
-19. Depending on your mobile device, download the Microsoft Authenticator application from the respective app store
+19. Depending on your mobile device, download the Microsoft Authenticator application from the respective app store.
 
-20. Scan the image on the page to add the credentials to your authenticator app
+20. Scan the image on the page to add the credentials to your authenticator app.
 
     ![In the Configure mobile app section, instructions are to scan the QR code.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image43.png "Configure mobile app section")
 
-21. Select **Next**, the page will validate that you in fact added the account
+21. Select **Next**, the page will validate that you in fact added the account.
 
     ![The Validation page displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image44.png "Validation page")
 
-22. Select **Next**, enter the **validation code** from the mobile app
+22. Select **Next**, enter the **validation code** from the mobile app.
 
     ![Step 2, Enter the verification code section displays.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image45.png "Enter verification code")
 
-23. Select **Verify**
+23. Select **Verify**.
 
-24. On the Additional security verification, select your country, and enter your mobile phone number, then select **Next**
+24. On the Additional security verification, select your country, and enter your mobile phone number, then select **Next**.
 
     ![On the Additional security verification screen, the country is selected, and a mobile phone number is entered into the Step 3 textbox. The Next button is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image46.png "Multi-factor authentication additional security verification screen - Step 3")
 
-25. On the next screen, copy the password provided, and select **Done**
+25. On the next screen, copy the password provided, and select **Done**.
 
     ![On the Additional security verification screen, Step 4, the app password is displayed, and Done is highlighted.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image47.png "Multi-factor authentication additional security verification screen - Step 4")
 
-26. Enter the Authenticator app code on the next screen and select **Verify**
+26. Enter the Authenticator app code on the next screen and select **Verify**.
 
     ![On the Microsoft login dialog, an Authenticator app code is entered, and Verify is selected.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image48.png "Enter code")
 
-27. If prompted, on the **Update your password page**, update your password
+27. If prompted, on the **Update your password page**, update your password.
 
-    > NOTE: The Current password will be the value you copied after resetting the password in Azure AD.
+    >**Note**: The Current password will be the value you copied after resetting the password in Azure AD.
 
-28. Select **Sign in**
+28. Select **Sign in**.
 
-29. If prompted, close the **Welcome to Microsoft Azure** dialog
+29. If prompted, close the **Welcome to Microsoft Azure** dialog.
 
 ## Exercise 2: Securing Azure Key Vault with Azure IAM
 
