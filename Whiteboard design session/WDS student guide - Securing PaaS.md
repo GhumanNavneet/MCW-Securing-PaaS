@@ -138,7 +138,7 @@ Directions: With all participants at your table, respond to the following questi
 
 2.  What data would you consider sensitive in this scenario? Is there a compliance standard that you would recommend Fourth Coffee consider building their solution against?
 
-*Securing Customer Identity*
+*Securing customer identity*
 
 1.  Fourth Coffee mentioned a desire to improve how they manage and store the identities of their customers, for use when granting them access to their online profiles. What approach would recommend they take to modernize their identity management?
 
