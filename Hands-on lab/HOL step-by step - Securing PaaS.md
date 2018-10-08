@@ -423,9 +423,9 @@ In this task, you use Access control (IAM) to assign role-based access control (
   
     ![In the Add permissions blade, the values above are entered into the specified fields.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image56.png "Add permissions blade")
 
-5.  Select **Save**
+5.  Select **Save**.
 
-6.  Select **+Add** again
+6.  Select **+Add** again.
 
 7.  In the Add permissions blade, enter:
 
@@ -521,7 +521,7 @@ In this task, you will log in with the three different Azure AD user accounts yo
 
 10. In your InPrivate or Incognito browser window, logoff and login as the **KeyVaultDeveloper**.
 
-    >**NOte**: You will need to reset the password for the account, as you did in [Exercise 1, Task 3, Step 13](#task-3-enable-azure-identity-protection-features).
+    >**Note**: You will need to reset the password for the account, as you did in [Exercise 1, Task 3, Step 13](#task-3-enable-azure-identity-protection-features).
 
     - Update the password, when prompted.
 
@@ -750,7 +750,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![In the Verify Specified Settings section, both Source and Target are expanded.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image81.png "Verify Specified Settings section")
 
-18. Select **Finish**, the database will deploy to Azure
+18. Select **Finish**, the database will deploy to Azure.
 
     ![The Importing database window displays a progress bar and a list of tasks and their status below.](images/Hands-onlabstep-bystep-SecuringPaaSimages/media/image82.png "Importing database window")
 
