@@ -9,9 +9,8 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-April 2018
+August 2018
 </div>
-
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
@@ -57,13 +56,13 @@ Analyze your customer's needs.
 
 Timeframe: 15 minutes
 
-Directions:  With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer
+1.  Meet your table participants and trainer.
 
-2.  Read all of the directions for steps 1-3 in the student guide
+2.  Read all of the directions for steps 1-3 in the student guide.
 
-3.  As a table team, review the following customer case study
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -85,19 +84,19 @@ They would like to start designing a pilot solution for one region, that if succ
 
 ### Customer needs 
 
-1.  Safeguard and manage identity of users and services
+1.  Safeguard and manage identity of users and services.
 
-2.  Detect and respond to identity-based threats
+2.  Detect and respond to identity-based threats.
 
-3.  Detect and respond to threats to their applications and solutions
+3.  Detect and respond to threats to their applications and solutions.
 
-4.  Gain visibility into security health
+4.  Gain visibility into security health.
 
-5.  Secure the loyalty data at rest and in transit. Allow access only to those who have a need
+5.  Secure the loyalty data at rest and in transit. Allow access only to those who have a need.
 
-6.  They want to achieve the right balance of security versus complexity
+6.  They want to achieve the right balance of security versus complexity.
 
-7.  Security centered around PaaS services 
+7.  Security centered around PaaS services. 
 
  ### Customer objections 
 
@@ -123,7 +122,7 @@ Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart:
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
@@ -139,7 +138,7 @@ Directions: With all participants at your table, respond to the following questi
 
 2.  What data would you consider sensitive in this scenario? Is there a compliance standard that you would recommend Fourth Coffee consider building their solution against?
 
-*Securing Customer Identity*
+*Securing customer identity*
 
 1.  Fourth Coffee mentioned a desire to improve how they manage and store the identities of their customers, for use when granting them access to their online profiles. What approach would recommend they take to modernize their identity management?
 
@@ -178,15 +177,16 @@ Directions: With all participants at your table, respond to the following questi
 1.  What services would you suggest Fourth Coffee utilize in order to monitor the general health of the solution?
 
 2.  What service would you suggest Fourth Coffee utilize to monitor the security health of the solution? What it would it provide for their solution?
+
 **Prepare**
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
+1.  Identify any customer needs that are not addressed with the proposed solution.
 
-2.  Identify the benefits of your solution
+2.  Identify the benefits of your solution.
 
-3.  Determine how you will respond to the customer's objections
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -202,19 +202,19 @@ Timeframe: 30 minutes
 
 Directions:
 
-1.  Pair with another table
+1.  Pair with another table.
 
-2.  One table is the Microsoft team and the other table is the customer
+2.  One table is the Microsoft team and the other table is the customer.
 
-3.  The Microsoft team presents their proposed solution to the customer
+3.  The Microsoft team presents their proposed solution to the customer.
 
-4.  The customer makes one of the objections from the list of objections
+4.  The customer makes one of the objections from the list of objections.
 
-5.  The Microsoft team responds to the objection
+5.  The Microsoft team responds to the objection.
 
-6.  The customer team gives feedback to the Microsoft team
+6.  The customer team gives feedback to the Microsoft team.
 
-7.  Tables switch roles and repeat Steps 2-6
+7.  Tables switch roles and repeat Steps 2-6.
 
 ##  Wrap-up 
 
@@ -228,7 +228,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 |----------|:-------------:|
 | **Description** | **Links** |
 | A reference architecture for building a solution that enables PCI compliance using Azure PaaS services   | <https://docs.microsoft.com/en-us/azure/security/blueprints/payment-processing-blueprint>  |
-|   Securing Azure Key Vault | Documentation on how to separate management and data access capabilities when securing Key Vault | <https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault>   |
+|   Securing Azure Key Vault - Documentation on how to separate management and data access capabilities when securing Key Vault | <https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault>   |
 |  Describes how Cosmos DB is secured     | <https://docs.microsoft.com/en-us/azure/cosmos-db/database-security>   |
 | How to configure a WAF for an ASE v2 environment   |  <https://docs.microsoft.com/en-us/azure/app-service/environment/app-service-app-service-environment-web-application-firewall>  |
 |  VNET Service Endpoints  |  <https://azure.microsoft.com/en-us/blog/announcing-virtual-network-integration-for-azure-storage-and-azure-sql/>   |
